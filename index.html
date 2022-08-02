@@ -32,27 +32,28 @@
         <button id="option-b-yes">Vote B</button>
        </div>
        <div>
-        <button id="option-a-no">Not A</button>
-        <button id="option-b-no">Not B</button>
+        <button id="option-a-no">No to A</button>
+        <button id="option-b-no">No to B</button>
        </div>
 
        <button id="archive-poll">archive this poll</button>
-       <section>
 
+       <section>
+        <form id="poll-form">
         <h2>make your own</h2>
 
         <label>
-            <input type="text" id="question-text">
+            <input class="user-input" id="question-input" name="question">
         </label>
         <label>
-            <input type="text" id="option-a-text">
+            <input class="user-input" id="option-a-input" name="option-a">
         </label>
         <label>
-            <input type="text" id="option-b-text">
+            <input class="user-input" id="option-b-input" name="option-b">
         </label>
 
         <button id="add-poll">Add Poll</button>
-
+        </form>
        </section>
        
        <section>
