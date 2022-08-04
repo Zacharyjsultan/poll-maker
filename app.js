@@ -12,7 +12,7 @@ const archivePollEl = document.getElementById('archive-poll');
 const currentPollEl = document.getElementById('newest-poll');
 const pastPollEl = document.getElementById('past-polls');
 
-const pollForm = document.getElementById('pollform');
+const pollForm = document.getElementById('poll-form');
 // let state
 let pastPolls = [];
 
@@ -67,7 +67,7 @@ optionBNoEl.addEventListener('click', () => {
     displayCurrentPoll();
 });
 
-addPollEl.addEventListener('click', () => {
+archivePollEl.addEventListener('click', () => {
 
     const currentPoll = {
         question: question,
@@ -86,20 +86,20 @@ addPollEl.addEventListener('click', () => {
 function displayCurrentPoll() {
     currentPollEl.textContent = '';
 
-    renderPoll();
-
+    const pollEl = renderPoll(question, optionA, optionB, votesA, votesB);
+    currentPollEl.append(pollEl);
 }
 
 function DisplayAllPolls() {
 
-    currentPollEl.textContent = '';
     pastPollEl.textContent = '';
 
-    for (let poll of pastPolls) {
-      
-        const pastPollsRender = renderPoll(poll.question, poll.votesA, poll.votesB, poll.optionA, poll.optionB);
 
-        pastPollEl.append(pastPollsRender);
+    for (let poll of pastPolls) {
+
+        const pollEl = renderPoll(poll.question, poll.votesA, poll.votesB, poll.optionA, poll.optionB);
+
+        pastPollEl.append(pollEl);
     }
 
 }
