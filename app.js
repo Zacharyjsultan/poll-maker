@@ -7,7 +7,6 @@ const optionBYesEl = document.getElementById('option-b-yes');
 const optionANoEl = document.getElementById('option-a-no');
 const optionBNoEl = document.getElementById('option-b-no');
 
-const addPollEl = document.getElementById('add-poll');
 const archivePollEl = document.getElementById('archive-poll');
 const currentPollEl = document.getElementById('newest-poll');
 const pastPollEl = document.getElementById('past-polls');
@@ -103,4 +102,3 @@ function DisplayAllPolls() {
     }
 
 }
-
